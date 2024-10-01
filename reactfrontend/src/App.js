@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import PageWelcome from './WebsitePages/PageWelcome';
 import PageRegistration from './WebsitePages/PageRegistration';
 import PageAccounts from './WebsitePages/PageAccounts';
@@ -13,8 +13,6 @@ import LoginFromPrivate from './components/LoginFromPrivate';
 import Footer from './components/Footer';
 
 function App() {
-  // const [auth, setAuth] = useState();
-
   return (
     <Router>
       <div className="app-container">
