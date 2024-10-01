@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+  height: 100%; /* Make sure the html and body are at least the height of the viewport */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+#main-content {
+  min-height: calc(100vh - 120px); /* Adjust 120px to the combined height of your navbar and footer if different */
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1 0 auto; /* Flex container to take available space */
+  max-width: 1170px; /* Max width for the main container */
+  margin: auto; /* Centering the main container */
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+}
+
+.footer {
+  position: relative; /* Fix the position */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #0d6484;
+  color: white;
+  text-align: left;
+  z-index: 10; /* Make sure the footer is above other content */
+}
+
+.footer-col {
+  width: 20%; /* Default width */
+  padding: 0 15px; /* Padding for inner spacing */
+  margin-bottom: 0; /* Reset bottom margin */
+}
+
+@media (max-width: 768px) {
+  .footer-col {
+    width: 50%; /* Adjust width on medium screens */
+    margin-bottom: 30px; /* Space between columns */
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allow rows to wrap on smaller screens */
+}
+
+ul {
+  list-style: none; /* Remove bullet points from lists */
+}
+
+.footer-col h4 {
+  font-size: 18px; /* Heading size in footer */
+  color: white; /* Heading text color */
+  text-transform: capitalize; /* Capitalize heading text */
+  font-weight: 500; /* Font weight for heading */
+  margin-bottom: 35px; /* Space below heading */
+  font-size: 1.25rem !important;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: white;
+  height: 2px;
+  width: 50px; /* Decorative underline width */
+}
+
+.footer-col ul li a {
+  font-size: 16px; /* Font size for links */
+  color: white; /* Link color */
+  text-transform: capitalize; /* Capitalize link text */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 300; /* Font weight for links */
+  display: block; /* Make links block to occupy full available width */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  font-size: 1.25rem !important;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 2px; /* Space between list items */
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff; /* White color on hover */
+  padding-left: 8px; /* Move text slightly on hover */
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px; /* Social icon height */
+  width: 40px; /* Social icon width */
+  background-color: rgba(255, 255, 255, 0.2); /* Translucent background */
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px; /* Align icon in the center */
+  border-radius: 50%; /* Circular icons */
+  color: white; /* Icon color */
+  transition: all 0.5s ease; /* Smooth transition for hover effects */
+}
+
+.footer-col .social-links a:hover {
+  background-color: #2a76a5; /* Change background on hover */
+}

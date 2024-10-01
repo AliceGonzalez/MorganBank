@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%; /* Ensure full height */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  position: relative; /* Needed to position the footer absolutely within it */
+}
+
+#main-content {
+  flex: 1 0 auto; /* Takes all available space, pushing the footer down */
+  padding-bottom: 70px; /* Adjust this to the height of your footer */
+  overflow-auto:; /* Allows scrolling within the main content if needed */
+}
+
+.footer {
+  position: absolute; /* Positioned relative to .app-container */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #0d6484; /* Example background color */
+  color: white;
+  text-align: center;
+  z-index: 10;
+}

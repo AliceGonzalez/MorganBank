@@ -1,0 +1,99 @@
+.login-container {
+  background: #2a76a524;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-box {
+  width: 400px; /* New smaller width for the login box */
+  height: 800px; /* New taller height for the login box */
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.input-field,
+.cs-button-solid,
+.input-field::placeholder,
+.input-field[type='date'],
+.h2 {
+  /* Shared styles for input fields, buttons, etc., remain here */
+}
+
+.input-field {
+  font-size: 2rem;
+  padding: 10px;
+  margin-bottom: 0.3em;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-field::placeholder {
+  font-size: 1em; /* Adjust the size as needed */
+  color: #8b8585; /* Optional: you can also change the color */
+}
+
+.cs-button-solid {
+  font-size: 1.5rem !important; /* Adjust the size as needed */
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto; /* Center the button horizontally */
+  color: #fff;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  display: block; /* Change display to block for easier centering */
+  width: 90%; /* Set width to 90% of the parent container */
+  max-width: 300px; /* Maximum width to maintain design integrity */
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  cursor: pointer;
+}
+
+.cs-button-solid:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #000;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 8px;
+  transition: width 0.3s;
+}
+
+.cs-button-solid:hover:before {
+  width: 100%;
+}
+
+.cs-button-solid:hover {
+  background-color: var(--primaryLight);
+  transform: scale(1.05);
+}
+.input-field[type='date'] {
+  font-size: 1.4rem; /* Adjust the size as needed */
+  color: #8b8585;
+}
+.h2 {
+  color: #2a76a5;
+  font-size: 2.5rem;
+}
